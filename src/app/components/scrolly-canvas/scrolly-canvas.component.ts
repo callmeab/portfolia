@@ -11,7 +11,7 @@ import {
 import { CommonModule } from '@angular/common';
 
 const TOTAL_FRAMES = 120;
-const FRAME_PATH = (i: number) => `/sequence/frames/frame_${String(i).padStart(3, '0')}.webp`;
+const FRAME_PATH = (i: number) => `sequence/frames/frame_${String(i).padStart(3, '0')}.webp`;
 
 interface TextPhase {
   text: string;
