@@ -103,6 +103,16 @@
         opacity: 0.8;
     }
 
+    &__role {
+        font-size: 0.68rem;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: color-mix(in srgb, var(--accent) 70%, transparent);
+        margin-bottom: 1rem;
+        font-family: 'Courier New', monospace;
+    }
+
     &__accent-line {
         height: 1px;
         width: 40px;

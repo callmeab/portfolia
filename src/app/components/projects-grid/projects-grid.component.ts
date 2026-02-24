@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 interface Project {
   id: number;
   title: string;
+  role: string;
   category: string;
   description: string;
   tags: string[];
@@ -22,42 +23,79 @@ export class ProjectsGridComponent {
   projects: Project[] = [
     {
       id: 1,
-      title: 'Luminate — Brand OS',
-      category: 'Brand Identity · Web',
+      title: 'SmartApp 360',
+      role: 'Angular Developer',
+      category: 'Web · Business Management',
       description:
-        'End-to-end brand identity and interactive web platform for a Series-A fintech startup. Motion-first design system with 40+ reusable tokens.',
-      tags: ['Angular', 'GSAP', 'Figma', 'Node.js'],
+        'Web-based business management solution with POS, Inventory, and Accounts modules. Features automated purchase orders, payroll management, dynamic reporting, and rapid invoicing for retail operations.',
+      tags: ['Angular', 'Tailwind CSS', 'Material UI', 'jQuery', 'Bootstrap'],
       accentColor: '#a78bfa',
       year: '2024',
     },
     {
       id: 2,
-      title: 'Orbis — Data Visualizer',
-      category: '3D · WebGL · Data',
+      title: 'CleryEdge',
+      role: 'Angular Developer',
+      category: 'Web · Enterprise Platform',
       description:
-        'Real-time 3D globe for visualising financial data streams. Built on Three.js with a custom WebSocket layer and sub-16ms render budget.',
-      tags: ['Three.js', 'WebSocket', 'TypeScript', 'D3'],
+        'Complete revamp of the original CleryEdge project from ASPX pages to ASP.NET Core MVC Web API. Redesigned front-end using Angular and DevExpress for improved performance, scalability, and UX.',
+      tags: ['Angular', 'DevExpress', 'ASP.NET Core', 'MVC'],
       accentColor: '#38bdf8',
       year: '2024',
     },
     {
       id: 3,
-      title: 'Onyx — E-Commerce',
-      category: 'Full-Stack · UX',
+      title: 'Discover Sair',
+      role: 'Angular / Ionic Developer',
+      category: 'Web · Mobile · Admin Panel',
       description:
-        'Luxury e-commerce experience with AI-powered style recommendations, sub-second LCP and a checkout conversion uplift of 22%.',
-      tags: ['Next.js', 'Prisma', 'OpenAI', 'Stripe'],
+        'Comprehensive travel booking platform built on the MEAN Stack. Supports multi-role workflows for travelers, admins, and managers with trip exploration, booking management, and approval flows.',
+      tags: ['Angular', 'Ionic', 'Node.js', 'Express.js', 'MongoDB'],
       accentColor: '#34d399',
-      year: '2023',
+      year: '2024',
     },
     {
       id: 4,
-      title: 'Prism — Design System',
-      category: 'Design Engineering',
+      title: 'PropUI',
+      role: 'Angular Developer',
+      category: 'Web · Migration Project',
       description:
-        'Comprehensive design system for a 120-person product org. Atomic architecture, auto-generated Storybook docs, and zero-runtime tokens.',
-      tags: ['React', 'Storybook', 'Style Dictionary', 'Figma'],
+        'Upgraded a full-featured Gym Management System to Angular 19. Modules for member registration, attendance, subscription management, and admin dashboards using Angular 16+ best practices.',
+      tags: ['Angular 19', 'TypeScript', 'RxJS', 'Angular Material'],
       accentColor: '#fb923c',
+      year: '2024',
+    },
+    {
+      id: 5,
+      title: 'DroneLeaf',
+      role: 'Angular Developer',
+      category: 'Web · Drone Management',
+      description:
+        'Innovative drone management and service portal with GraphQL API integration. Dual-login system for Personal and Organization users, dynamic dashboards, and real-time updates.',
+      tags: ['Angular', 'GraphQL', 'TypeScript', 'RxJS'],
+      accentColor: '#f472b6',
+      year: '2023',
+    },
+    {
+      id: 6,
+      title: 'NIC Skin Care',
+      role: 'Ionic-Angular Developer',
+      category: 'Mobile · AI · Skincare',
+      description:
+        "Hybrid mobile app that scans men's facial images and delivers personalized skincare routines using AI. Integrates OpenAI API, Firebase Auth, and Firestore for secure, data-driven recommendations.",
+      tags: ['Ionic', 'Angular', 'OpenAI API', 'Firebase'],
+      accentColor: '#4ade80',
+      year: '2023',
+    },
+    {
+      id: 7,
+      title: 'SignLingo Kids',
+      role: 'Ionic-Angular Developer',
+      category: 'Mobile · Education · Accessibility',
+      description:
+        'ASL-inspired learning app for kids featuring 3D animated models to demonstrate sign language gestures. Child-friendly UI/UX with modular architecture for smooth cross-platform performance.',
+      tags: ['Ionic', 'Angular', '3D Animation', 'TypeScript'],
+      accentColor: '#facc15',
       year: '2023',
     },
   ];

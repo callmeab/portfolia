@@ -2,9 +2,9 @@
     <!-- Section header -->
     <div class="projects-section__header">
         <span class="projects-section__eyebrow">Selected Work</span>
-        <h2 class="projects-section__title">Case Studies</h2>
+        <h2 class="projects-section__title">Real Projects</h2>
         <p class="projects-section__subtitle">
-            A curated selection of projects spanning brand, product, and engineering.
+            Live products I've built and shipped — spanning web, mobile, and enterprise platforms.
         </p>
     </div>
 
@@ -18,6 +18,9 @@
                 <span class="project-card__category">{{ project.category }}</span>
             </div>
 
+            <!-- Role badge -->
+            <div class="project-card__role">{{ project.role }}</div>
+
             <!-- Accent line -->
             <div class="project-card__accent-line"></div>
 
@@ -30,17 +33,6 @@
                 @for (tag of project.tags; track tag) {
                 <span class="project-card__tag">{{ tag }}</span>
                 }
-            </div>
-
-            <!-- CTA -->
-            <div class="project-card__footer">
-                <button class="project-card__cta" [style.color]="project.accentColor">
-                    View Case Study
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                </button>
             </div>
 
             <!-- Glow orb -->
