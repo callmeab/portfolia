@@ -1,0 +1,32 @@
+<!-- 500vh scroll container -->
+<div class="scroll-container">
+
+    <!-- Sticky viewport -->
+    <div class="sticky-wrap" #stickyWrap>
+
+        <!-- Canvas layer -->
+        <canvas #canvasEl class="canvas-layer" aria-hidden="true"></canvas>
+
+        <!-- Vignette overlay -->
+        <div class="vignette" aria-hidden="true"></div>
+
+        <!-- Text overlay layer (z-index: 10) -->
+        <div class="text-layer">
+            @for (phase of phases; track phase.text) {
+            <div class="text-phase" [class.text-phase--left]="phase.align === 'left'"
+                [class.text-phase--right]="phase.align === 'right'"
+                [class.text-phase--center]="phase.align === 'center'" [style]="getPhaseStyle(phase)">
+                <p class="text-phase__headline">{{ phase.text }}</p>
+                <p class="text-phase__sub">{{ phase.sub }}</p>
+            </div>
+            }
+        </div>
+
+        <!-- Scroll indicator (only visible at top) -->
+        <div class="scroll-hint" [style.opacity]="scrollProgress < 0.04 ? '1' : '0'">
+            <span class="scroll-hint__label">Scroll</span>
+            <span class="scroll-hint__line"></span>
+        </div>
+
+    </div>
+</div>

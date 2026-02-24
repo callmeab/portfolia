@@ -1,0 +1,110 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 2.5rem;
+    background: rgba(18, 18, 18, 0.6);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    transition: background 0.3s ease;
+
+    &__brand {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.1rem;
+        letter-spacing: -0.02em;
+    }
+
+    &__dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #a78bfa, #38bdf8);
+        box-shadow: 0 0 10px rgba(167, 139, 250, 0.6);
+        animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    &__name {
+        background: linear-gradient(90deg, #fff 0%, #a0a0a0 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    &__links {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__link {
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+        font-size: 0.875rem;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        transition: color 0.25s ease;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: linear-gradient(90deg, #a78bfa, #38bdf8);
+            transition: width 0.3s ease;
+        }
+
+        &:hover {
+            color: #fff;
+
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@keyframes pulse-dot {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 640px) {
+    .navbar {
+        padding: 1rem 1.25rem;
+
+        &__links {
+            gap: 1.25rem;
+        }
+
+        &__link {
+            font-size: 0.75rem;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<nav class="navbar">
+    <a class="navbar__brand" href="#">
+        <span class="navbar__dot"></span>
+        <span class="navbar__name">Abdullah</span>
+    </a>
+    <ul class="navbar__links">
+        @for (link of navLinks; track link.label) {
+        <li>
+            <a [href]="link.href" class="navbar__link">{{ link.label }}</a>
+        </li>
+        }
+    </ul>
+</nav>

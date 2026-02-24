@@ -1,12 +1,14 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { ScrollyCanvasComponent } from './components/scrolly-canvas/scrolly-canvas.component';
+import { ProjectsGridComponent } from './components/projects-grid/projects-grid.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [NavBarComponent, ScrollyCanvasComponent, ProjectsGridComponent, FooterComponent],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
-export class App {
-  protected readonly title = signal('portfolia');
-}
+export class App {}

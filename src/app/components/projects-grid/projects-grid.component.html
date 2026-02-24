@@ -1,0 +1,51 @@
+<section class="projects-section" id="projects">
+    <!-- Section header -->
+    <div class="projects-section__header">
+        <span class="projects-section__eyebrow">Selected Work</span>
+        <h2 class="projects-section__title">Case Studies</h2>
+        <p class="projects-section__subtitle">
+            A curated selection of projects spanning brand, product, and engineering.
+        </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="projects-grid">
+        @for (project of projects; track project.id) {
+        <article class="project-card" [style.--accent]="project.accentColor">
+            <!-- Top bar -->
+            <div class="project-card__meta">
+                <span class="project-card__year">{{ project.year }}</span>
+                <span class="project-card__category">{{ project.category }}</span>
+            </div>
+
+            <!-- Accent line -->
+            <div class="project-card__accent-line"></div>
+
+            <!-- Content -->
+            <h3 class="project-card__title">{{ project.title }}</h3>
+            <p class="project-card__desc">{{ project.description }}</p>
+
+            <!-- Tags -->
+            <div class="project-card__tags">
+                @for (tag of project.tags; track tag) {
+                <span class="project-card__tag">{{ tag }}</span>
+                }
+            </div>
+
+            <!-- CTA -->
+            <div class="project-card__footer">
+                <button class="project-card__cta" [style.color]="project.accentColor">
+                    View Case Study
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Glow orb -->
+            <div class="project-card__glow" aria-hidden="true"></div>
+        </article>
+        }
+    </div>
+</section>
