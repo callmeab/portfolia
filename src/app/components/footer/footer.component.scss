@@ -45,6 +45,42 @@
         letter-spacing: 0.02em;
     }
 
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        margin: 0.5rem 0;
+
+        @media (min-width: 600px) {
+            flex-direction: row;
+            gap: 2rem;
+        }
+    }
+
+    &__contact-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.95rem;
+        text-decoration: none;
+        transition: color 0.25s ease;
+
+        svg {
+            color: rgba(255, 255, 255, 0.3);
+            transition: color 0.25s ease;
+        }
+
+        &:hover {
+            color: #fff;
+            
+            svg {
+                color: #fff;
+            }
+        }
+    }
+
     &__socials {
         display: flex;
         gap: 1.25rem;
